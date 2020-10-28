@@ -36,7 +36,7 @@
     - Opening Links in a New Window : `target="_blank"`
     - Linking At Will
     ``` html
-<a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="https://www.Prickly_Pear_Closeup.jpg" alt="A red prickly pear fruit"/></a>
+    <a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="https://www.Prickly_Pear_Closeup.jpg" alt="A red prickly pear fruit"/></a>
     ```
 - Linking to the same page : `<a href="#top">Top</a>`
 - Recommends 2 spaces of indentation when writing HTML code
