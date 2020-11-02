@@ -1,4 +1,4 @@
-yiyidu## Cascading Style Sheets
+## Cascading Style Sheets
 ### CSS Setup and Selectors
 
 - Inline Styles : `<p style="color: red; font-size: 20px;>I'm learning to code!</p>`
