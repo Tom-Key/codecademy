@@ -1,4 +1,4 @@
-## Cascading Style Sheets
+yiyidu## Cascading Style Sheets
 ### CSS Setup and Selectors
 
 - Inline Styles : `<p style="color: red; font-size: 20px;>I'm learning to code!</p>`
@@ -87,5 +87,6 @@
 - text-align: left/center/right
 - color/background-color
 - opacity
+    - Its values range from 0 (transparent) to 1 (opaque)
 - background-image: url("https://www.example.com/image.jpg");
 - !important : It will override any style no matter how specific it is
