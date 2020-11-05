@@ -61,5 +61,15 @@
 ```
 - Submit Form
 - `<input type="submit" value="Send">`
+
 ### Form Validation
-    
+- One type is server-side validation, this happens when data is sent to another machine (typically a server) for validation. An example of this type of validation is the usage of a login page    
+- Requiring an Input  
+`<input id="allergies" name="allergies" type="text" required>`
+- Set a Minimum and Maximum  
+`<input id="guests" name="guests" type="number" min="1" max="4">`
+- Checking Text Length  
+`minlength="5" maxlength="250"`
+- Matching a Pattern 
+    - `pattern="[0-9]{14,16}"`
+    - [Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
