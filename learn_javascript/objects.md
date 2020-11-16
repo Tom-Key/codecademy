@@ -38,3 +38,92 @@
     ```
 
 ### Advanced Objects
+- The this Keyword
+    - *(self in python objects)*
+    - Inside the scope of the .diet() method, we don’t automatically have access to other properties of the goat object.
+    - avoid using arrow functions when using this in a method!
+- Privacy
+    - One common convention is to place an underscore `_` before the name of a property to mean that the property should not be altered.
+    - In the example above, the _amount is not intended to be directly manipulated.Even so, it is still possible to reassign _amount:
+- **Getters** are methods that get and return the internal properties of an object.
+- **setter** methods which reassign values of existing properties within an object.
+    ```js
+    const robot = {
+      _model: '1E78V2',
+      _energyLevel: 100,
+      _numOfSensors: 15,
+      get numOfSensors(){
+        if(typeof this._numOfSensors === 'number'){
+          return this._numOfSensors;
+        } else {
+          return 'Sensors are currently down.'
+        }
+      },
+      set numOfSensors (num) {
+        if(typeof num === 'number' && num >=0){
+          this._numOfSensors = num;
+        } else {
+          console.log( 'Pass in a number that is greater than or equal to 0');
+        }
+      },
+
+    };
+    ```
+---
+- Factory Functions
+    ``` js
+    const monsterFactory = (name, age, energySource, catchPhrase) => {
+      return { 
+        name: name,
+        age: age, 
+        energySource: energySource,
+        scare() {
+          console.log(catchPhrase);
+        } 
+      }
+    };
+    const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!');
+    ghost.scare(); // 'BOO!'
+    ```
+- Property Value Shorthand
+    ```js
+    const monsterFactory = (name, age) => {
+      return { 
+        name: name,
+        age: age
+      }
+    };
+    /* The example below works exactly like the example above */
+    const monsterFactory = (name, age) => {
+      return { 
+        name,
+        age 
+      }
+    };
+    ```
+- Destructured Assignment
+    ```js
+    const vampire = {
+      name: 'Dracula',
+      residence: 'Transylvania',
+      preferences: {
+        day: 'stay inside',
+        night: 'satisfy appetite'
+      }
+    };
+    const { residence } = vampire; // 'Transylvania'
+    const { day } = vampire.preferences;  // 'stay inside'
+
+    console.log(typeof residence) // object
+    ```
+     
+- Built-in Object Methods
+    ``` js
+    // grab the property names, otherwise known as keys, 
+    const robotKeys = Object.keys(robot);
+    // array will contain more arrays that have both the key and value of the properties 
+    const robotEntries = Object.entries(robot)
+    // want another object that has the properties of robot but with a few additional properties.
+    const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
+    ```
+    - [MDN’s object instance documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods)
